@@ -23,6 +23,7 @@ namespace EMGU_Webcam_Testing
         private void Form1_Load(object sender, EventArgs e)
         {
             m = new Mat();
+            FaceTrackingServer.Begin();
             tracker = new FaceTracker(@"haar/haarcascade_frontalface_default.xml", 10);
             new WebcamCapture(OnNewImage);
         }
